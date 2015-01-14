@@ -61,7 +61,7 @@
 				<div class="slider2">
 				{% for i in news %}
      			 	<div class="slide">
-     			 		<a href="#">
+     			 		<a href="/content?news_id={{ i.news.id }}">
      			 		<img src="/media/{{ i.image }}">
      			 		<h3>{{ i.news }}</h3>
      			 		</a>

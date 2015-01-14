@@ -61,6 +61,14 @@ def composeImage(raw_list):
 
 
 def LeftBehind(request):
-    news_all = Column.objects.get(name="校园新闻").article.all()
+    news_all = Column.objects.get(name="留守之家").article.all()
     news_list = composeArticle(news_all)
     return render_to_response('left-behind.html',{'list':news_list,})
+
+
+def NewsList(request):
+    news_all = Column.objects.get(name="校园新闻").article.all()
+    imgs_all = Column.objects.get(name="魅力校园").article.all()
+    news_list = composeArticle(news_all)
+    imgs_list = composeImage(imgs_all)
+    return render_to_response('news.html',{'list':news_list, 'school':imgs_list,})
