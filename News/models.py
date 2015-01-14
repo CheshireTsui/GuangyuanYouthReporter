@@ -23,7 +23,7 @@ class Image(models.Model):
 class Article(models.Model):
     title = models.CharField(max_length=64)
     intro = models.CharField(max_length=100)
-    image = models.ManyToManyField(Image)
+    image = models.ManyToManyField(Image,blank=True)
     content = models.TextField()
     source = models.CharField(max_length=10, default="本站原创")
     editor = models.CharField(max_length=10)
@@ -40,7 +40,7 @@ class Article(models.Model):
 
 class Column(models.Model):
     name = models.CharField(max_length=32)
-    article = models.ManyToManyField(Article)
+    article = models.ManyToManyField(Article,blank=True)
 
     class Meta: 
         ordering = ['-id']
@@ -53,7 +53,7 @@ class ImageAdmin(admin.ModelAdmin):
     list_display = ["title","thumbnail",]
 
 class ArticleAdmin(admin.ModelAdmin):
-    list_display = ["title","intro",]
+    list_display = ["title","intro","uptime",]
 
 class ColumnAdmin(admin.ModelAdmin):
     list_display = ["name",]

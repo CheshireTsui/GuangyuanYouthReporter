@@ -2,6 +2,7 @@
 from django.db import models
 from django.contrib import admin
 from youth.settings import  MEDIA_ROOT
+from News.models import  Article
 
 class Cover(models.Model):
     image = models.FileField(upload_to="home_page_cover/")
@@ -20,6 +21,7 @@ class Cover(models.Model):
 
 class Top(models.Model):
     name = models.CharField(max_length=64)
+    school = models.ForeignKey(Article)
     amount = models.IntegerField(default=0)
 
     class Meta: 
@@ -49,7 +51,7 @@ class CoverAdmin(admin.ModelAdmin):
     list_display = ["__unicode__","thumbnail",]
 
 class TopAdmin(admin.ModelAdmin):
-    list_display = ["__unicode__","amount",]
+    list_display = ["__unicode__","amount","school",]
 
 class StarAdmin(admin.ModelAdmin):
     list_display = ["__unicode__","thumbnail",]
