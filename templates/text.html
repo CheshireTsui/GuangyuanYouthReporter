@@ -65,7 +65,9 @@
 			</div>
 			<div class="pure-u-16-24">
 			<div style="text-align:center;color:gray;">
+			{% if img %}
 			    <img src="/media/{{ img }}" style="max-width:66.6667%;max-height:66.6667%;"/>
+			{% endif %}
                 <br />
                 <p>{{ news.intro }}</p>
 			</div>

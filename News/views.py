@@ -107,7 +107,7 @@ def Content(request):
     try:
         news = Article.objects.get(id=news_id)
         img = news.image.all()
-        img = img[0]
+        if img: img = img[0]
     except Exception, e:
         return HttpResponse("%s 请求的文章不存在！"%e)
     return render_to_response('text.html',{'news':news, 'img':img,})
@@ -115,7 +115,7 @@ def Content(request):
 
 def ArticleList(request):
     news_column = request.GET.get('news_column')
-    if (not request.GET.get('news_page'))or(request.GET.get('news_page')==0):
+    if (not request.GET.get('news_page'))or(request.GET.get('news_page')=='0'):
         news_page = 1
     else:
         news_page = int(request.GET.get('news_page'))
