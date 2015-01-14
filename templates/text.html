@@ -64,9 +64,11 @@
 			<div class="pure-u-3-24">
 			</div>
 			<div class="pure-u-16-24">
-			{% if news.image.name %}
-			<img src="/media/{{news.image.name}}"/ style="clear:both;">
-			{% endif %}
+			<div style="text-align:center;color:gray;">
+			    <img src="/media/{{ img }}" style="max-width:66.6667%;max-height:66.6667%;"/>
+                <br />
+                <p>{{ news.intro }}</p>
+			</div>
 				{% autoescape off %}
 				{{news.content}}
 				{% endautoescape %}
