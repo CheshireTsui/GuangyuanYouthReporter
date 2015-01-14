@@ -20,8 +20,8 @@ def index(request):
     news_all = Column.objects.get(name="校园新闻").article.all()
     news_list = []
     for i in news_all:
-    	img = i.image.all()
-    	news = News(i,img[0])
-    	news_list.append(news)
+        img = i.image.all()
+        news = News(i,img[0])
+        news_list.append(news)
 
     return render_to_response('index.html',{'cover':cover_list, 'top':top_list, 'star':star, 'news':news_list,})
