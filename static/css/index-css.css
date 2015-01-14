@@ -1,0 +1,248 @@
+.inner-box img{
+	margin-left: 10em;
+}
+#modaltrigger{
+	margin-left: -1.3em;
+}
+#bg-stretcher{
+    height: 700px;
+}
+.slogan{
+	position: absolute;
+	top: 2.5em;
+	right: 7em;
+	color: #ECEBEA;
+	font-size: 1.5em;
+}
+#slogan-button{
+	background: rgba(62,184,102,0.5);
+	border: 0;
+	padding: 0.3em 0.7em;
+	border-radius: 0.5em;
+	font-family: "Microsoft Yahei",sans-serif;
+	color: #ECEBEA;
+}
+#slogan-button:hover{
+	background: rgb(62,184,102);
+	color: #ffffff;
+}
+.linear-graditent{
+      filter:alpha(opacity=100 finishopacity=50 style=1 startx=0,starty=0,finishx=0,finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=red,endcolorstr=blue,gradientType=0);
+      -ms-filter:alpha(opacity=100 finishopacity=50 style=1 startx=0,starty=0,finishx=0,finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=red,endcolorstr=blue,gradientType=0);/*IE8*/  
+      background: #54BE62; /* 一些不支持背景渐变的浏览器 */      
+      background:-webkit-linear-gradient(top,#54BE62,#ffffff);
+      background:-o-linear-gradient(top,#54BE62,#ffffff);
+      background:linear-gradient(top,#54BE62,#ffffff);
+} 
+.primary-button{  
+	background: #DEDEDE;
+	border: 0;
+	padding: 0.7em 0.5em;
+	border-radius: 0.5em;
+	color: #26B26A;
+}
+.primary-button:hover{
+	background: #54BE62;
+	color: #ffffff;
+}
+.school-message-list{
+	margin-top: -0.9em;
+}
+.school-message-list ul li{
+	list-style: none;
+	background: #DEDEDE;
+	border-radius: 0.5em;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+}
+.school-message-list a{
+	color: #26B26A;
+	margin-left: 1.5em;
+}
+.school-message-list li:hover{
+	background: #26B26A; 
+}
+.school-message-list li:hover a{
+	color: #ffffff;
+}
+/*本周之星设定图片尺寸*/
+.pure-u-8-24 img{
+	width: 90%;
+	border-radius: 0.5em;
+	margin-left: 2em;
+	padding-bottom: 1em;
+}
+.graph-title{
+	margin-top: 1em;
+	margin-left: 3em;
+	background: #ffffff;
+	padding: 0.5em 1em;
+	border-radius: 0.2em;
+	color: #26B26A;
+}
+.graph-title a{
+	color: #26B26A;
+}
+.chaining{
+	margin-left: 8em;
+}
+.chaining a{
+	text-decoration: none;
+      color:  #000000;
+}
+.chaining ul{
+  list-style: none;
+  margin-left: -2.6em;
+}
+.copyright{
+	margin-top: 5em;
+	margin-left: 2.8em;
+}
+.attention-me img{
+  width: 8em;
+}
+.fa-two-dimension-code{
+      margin-right: 0.5em;
+      margin-top: 0.25em;
+}
+#two-dimension-code-wechat,#two-dimension-code-weibo{
+      display: none;
+}
+span > a:hover{
+  color: #26B26A;
+}
+a:hover+#two-dimension-code-weibo{
+      display: block;
+      position: relative;
+      top: -11.2em;
+      left: -2em;
+}
+a:hover+#two-dimension-code-wechat{
+      display: block;
+      position: relative;
+      top: -11.2em;
+      left: 2em;
+}
+/** modal window styles **/
+#lean_overlay {
+    position: fixed;
+    z-index:100;
+    top: 0px;
+    left: 0px;
+    height:100%;
+    width:100%;
+    background: #000;
+    display: none;
+}
+  
+#loginmodal {
+  width: 300px;
+  padding: 15px 20px;
+  background: #f3f6fa;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+}
+  
+#loginform { /* no default styles */ }
+  
+#loginform label { display: block; font-size: 1.1em; font-weight: bold; color: #7c8291; margin-bottom: 3px; }
+  
+.txtfield { 
+  display: block;
+  width: 100%;
+  padding: 6px 5px;
+  margin-bottom: 15px;
+  font-family: 'Helvetica Neue', Helvetica, Verdana, sans-serif;
+  color: #7988a3;
+  font-size: 1.4em;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.8);
+  background-color: #fff;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#edf3f9), to(#fff));
+  background-image: -webkit-linear-gradient(top, #edf3f9, #fff);
+  background-image: -moz-linear-gradient(top, #edf3f9, #fff);
+  background-image: -ms-linear-gradient(top, #edf3f9, #fff);
+  background-image: -o-linear-gradient(top, #edf3f9, #fff);
+  background-image: linear-gradient(top, #edf3f9, #fff);
+  border: 1px solid;
+  border-color: #abbce8 #c3cae0 #b9c8ef;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.4);
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.4);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.4);
+  -webkit-transition: all 0.25s linear;
+  -moz-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+}
+  
+.txtfield:focus {
+  outline: none;
+  color: #525864;
+  border-color: #84c0ee;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), 0 0 7px #96c7ec;
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), 0 0 7px #96c7ec;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), 0 0 7px #96c7ec;
+}
+
+/**/
+/** page structure **/
+#w {
+  display: block;
+  width: 750px;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+  
+#content {
+  display: block;
+  width: 100%;
+  background: #fff;
+  padding: 25px 20px;
+  padding-bottom: 35px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+  
+/** custom login button **/
+.flatbtn-blu { 
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  color: #edf4f9;
+  text-decoration: none;
+  background-color: #4f94cf;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  font-size: 1.3em;
+  font-weight: bold;
+  padding: 12px 26px 12px 26px;
+  line-height: normal;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+.flatbtn-blu:hover {
+  color: #fff;
+  background-color: #519dde;
+}
+.flatbtn-blu:active {
+  -webkit-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow:inset 0 1px 5px rgba(0, 0, 0, 0.1);
+  box-shadow:inset 0 1px 5px rgba(0, 0, 0, 0.1);
+}

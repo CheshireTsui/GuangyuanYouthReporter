@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport">
+<title>小记者站-广元日报社</title>
+<link rel="stylesheet" type="text/css" href="/static/css/pure.css">
+<!--[if lte IE 8]>
+  <link rel="stylesheet" href="/static/css/grids-responsive-old-ie.css">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/static/css/grids-responsive.css">
+<!--<![endif]-->
+<link rel="stylesheet" type="text/css" href="/static/css/text-css.css">
+<link rel="stylesheet" type="text/css" href="/static/css/jquery.bxslider.css">
+<link rel="stylesheet" type="text/css" href="/static/css/font-awesome.min.css">
+<link rel="shortcut icon" href="/static/material/p1.ico" type="image/ico">
+</head>
+<body>
+	<div class="pure-g" style="background: #26B26A;">
+		<div class="pure-u-10-24">
+			<div class="inner-box">
+				<a href="/"><img src="/static/material/logo.png"><i class="fa fa-pencil-square fa-2x" style="color: #DEDEDE"></i></a>
+			</div>
+		</div>
+		<div class="pure-u-10-24">
+			<div class="pure-menu pure-menu-open pure-menu-horizontal" id="horizontal-menu">
+    			<ul id="std-menu-items">
+	        			<li class=".menuItem"><a href="/left-behind/">留守儿童</a></li>
+	        			<li class=".menuItem"><a href="/news/">新闻动态</a></li>
+	        			<li class=".menuItem"><a href="/literature/">文艺风采</a></li>
+	        			<li class=".menuItem"><a href="/reporter/">小记者站</a></li>
+    			</ul>
+			</div>
+		</div>
+		<!-- <div class="pure-u-4-24">
+			<div class="innner-box">
+				<a href="" class="pure-button pure-button-primary" id="modaltrigger">登录</a>
+			</div>
+		</div>v2.0 -->
+	</div>
+	<div>
+		<div class="pure-g">
+			<div class="pure-u-3-24">
+			</div>
+			<div class="pure-u-16-24">
+				<h1>{{news.title}}</h1>
+			</div>
+			<div class="pure-u-5-24">
+			</div>
+		</div>
+		<div class="pure-g">
+			<div class="pure-u-3-24">
+			</div>
+			<div class="pure-u-16-24">
+				<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a></div>
+				<h5 style="border-bottom: 1px solid #DEDEDE color: grey;">{{news.uptime}} 来源：{{news.source}} 编辑：{{news.editor}}</h5>
+			</div>
+			<div class="pure-u-5-24">
+			</div>
+		</div>
+		<div class="pure-g">
+			<div class="pure-u-3-24">
+			</div>
+			<div class="pure-u-16-24">
+			{% if news.image.name %}
+			<img src="/media/{{news.image.name}}"/ style="clear:both;">
+			{% endif %}
+				{% autoescape off %}
+				{{news.content}}
+				{% endautoescape %}
+			</div>
+			<div class="pure-u-5-24">
+			</div>
+		</div>
+	</div>
+	<div class="pure-g" style="background:#DEDEDE;">
+		<div class="pure-u-1-3">
+			<div class="chaining">
+				<h3>友情链接</h3>
+				<ul>
+					<a href="http://e.gyxww.cn/gyrb/html/2014-10/27/node_1.htm"><li>广元日报社数字报刊</li></a>
+					<a href="http://gywb.gyscw.com/"><li>广元晚报电子报</li></a>
+					<a href="http://www.gyxww.cn/sjb/"><li>广元手机报</li></a>
+					<a href="http://www.gyxww.cn/gyxjzw/"><li>广元小记者网</li></a>
+				</ul>
+			</div>
+		</div>
+		<div class="pure-u-1-3">
+			<div style="margin-top: 1em;">
+				<span class="bdsharebuttonbox">
+					<a href="#" class="bds_more" data-cmd="more"></a>
+					<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+					<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+					<a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+					<a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+					<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+				</span>
+				<p>© copyright 广元日报社版权所有</p>
+				<p>技术支持：IEC</p>
+			</div>
+		</div>
+		<div class="pure-u-1-3">
+			<div class="attention-me">
+				<h3>欢迎关注广元日报</h3>
+				<span>
+					<a><i class="fa fa-weibo fa-3x fa-two-dimension-code"></i></a>
+					<img src="/static/material/sinaweibo.jpg" id="two-dimension-code-weibo">
+				</span>
+				<span>
+					<a><i class="fa fa-weixin fa-3x fa-two-dimension-code"></i></a>
+					<img src="/static/material/wechat.jpg" id="two-dimension-code-wechat">
+				</span>
+			</div>
+		</div>
+	</div>
+	<div id="loginmodal" style="display:none;">
+	    	<h1>User Login</h1>
+	    	<form id="loginform" name="loginform" method="post" action="/">
+		      	<label for="username">Username:</label>
+		      	<input type="text" name="username" id="username" class="txtfield" tabindex="1">
+		      	<label for="password">Password:</label>
+		      	<input type="password" name="password" id="password" class="txtfield" tabindex="2">
+		     	 <div class="center">
+		     	 	<input type="submit" name="loginbtn" id="loginbtn" class="flatbtn-blu hidemodal" value="Log In" tabindex="3">
+		     	 </div>
+	   	 </form>
+ 	 </div>
+</body>
+<!-- <script src="/static/js/jQuery1.11.1.js"></script> -->
+<script type="text/javascript" src="/static/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="/static/js/stickUp.js"></script>
+<script type="text/javascript" src="/static/js/jquery.leanModal.min.js"></script>
+<script type="text/javascript">
+//initiating jQuery
+jQuery(function($) {
+    $(document).ready( function() {
+    //enabling stickUp on the '.navbar-wrapper' class
+        $('#horizontal-menu').stickUp({
+            parts: {
+                0:'',
+                1:'features',
+                2: 'news',
+                3: 'installation',
+            },
+            itemClass: '.menuItem',
+            itemHover: 'active'
+        });;
+    });
+});
+</script>
+<script type="text/javascript" src="/static/js/jquery.goup.min.js"></script>
+<script type="text/javascript">
+        	$(document).ready(function () {
+	            $.goup({
+	                trigger: 50,
+	                bottomOffset: 50,
+	                locationOffset: 100,
+	                title: '返回顶部',
+	                titleAsText: true
+	            });
+        });
+</script>
+<script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>

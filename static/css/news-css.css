@@ -1,0 +1,147 @@
+.inner-box img{
+	margin-left: 10em;
+}
+#modaltrigger{
+	margin-left: -1.3em;
+}
+.pure-u-1 h1{
+	margin-left: 4em;
+}
+.article-block{
+	margin: 0 -5em 1em 8em;
+	border: 1.5px solid #54BE62;
+	border-radius: 0.4em;
+	padding: 0.6em 0.8em;
+	color: #26B26A;
+}
+.article-block>a{
+	text-decoration: none;
+	color: #54BE62;
+}
+.article-block:hover{
+	background: #54BE62;
+}
+.article-block a:hover{
+	color: #ffffff;
+}
+.pure-g h6{
+	color: grey;
+	margin: -1em 0;
+	letter-spacing: 0;
+}
+.button-more-info{
+	margin-left: 61em;
+	color: #26B26A;
+	padding: 0.5em 1em;
+	border-radius: 0.3em;
+	background: #DEDEDE;
+	text-decoration: none;
+}
+#painter-slider{
+	padding: -2em 0;
+}
+#painter-slider img{
+	width: 40em;
+	height: 30em;
+}
+.bx-pager{
+	margin-left: 9.5em;
+}
+.chaining{
+	margin-left: 8em;
+}
+.chaining a{
+	text-decoration: none;
+      color:  #000000;
+}
+.chaining ul{
+  list-style: none;
+  margin-left: -2.6em;
+}
+.copyright{
+	margin-top: 5em;
+	margin-left: 2.8em;
+}
+.attention-me img{
+  width: 8em;
+}
+.fa-two-dimension-code{
+      margin-right: 0.5em;
+      margin-top: 0.25em;
+}
+#two-dimension-code-wechat,#two-dimension-code-weibo{
+      display: none;
+}
+span > a:hover{
+  color: #26B26A;
+}
+a:hover+#two-dimension-code-weibo{
+      display: block;
+      position: relative;
+      top: -11.2em;
+      left: -2em;
+}
+a:hover+#two-dimension-code-wechat{
+      display: block;
+      position: relative;
+      top: -11.2em;
+      left: 2em;
+}
+
+/*only for news page*/
+.sculpture{
+	width: 3em;
+	border-radius: 50%;
+}
+.line-for-more-info{
+	margin: 0.5em 0 1.5em 0;
+}
+.button-more-info-school-news{
+	border: solid 1px #26B26A;
+	color: #26B26A;
+	padding: 0.5em 1em;
+	text-decoration: none;
+	border-radius: 0.3em;
+}
+.button-more-info-school-news:hover{
+	color: #ffffff;
+	background: #26B26A;
+}
+.pure-u-6-24{
+	margin-left: -2em;
+	padding: 0 3em 1em 0;
+}
+.pure-u-6-24 img{
+	width: 95%;
+	height: 12em;
+}
+.graph-title{
+	background: #26B26A;
+	width: 95%;
+	padding: -2em 0;
+	margin-top: -2em;
+	padding-bottom: 0.5em;
+	color: #ffffff;
+}
+.graph-title img{
+	width: 3em;
+	height: 3em;
+	border-radius: 50%;
+	margin-left: 1em;
+}
+.graph-title:hover{
+	background: #ffffff;
+	border-bottom: 1px solid #26B26A;
+	color: #26B26A;
+}
+.graph-title-without-sculpture{
+	width: 95%;
+	padding: -2em 0;
+	margin-top: -2em;
+	margin-left: 2em;
+	padding-bottom: 0.5em;
+	color: #ffffff;
+}
+.graph-title-without-sculpture:hover{
+	color: #26B26A;	
+}

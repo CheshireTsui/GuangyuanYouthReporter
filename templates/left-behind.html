@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport">
+<title>小记者站-广元日报社</title>
+<link rel="stylesheet" type="text/css" href="/static/css/pure.css">
+<link rel="stylesheet" type="text/css" href="/static/css/news-css.css">
+<link href="/static/css/jquery.bxslider.css" rel="stylesheet" type="text/css">
+<!--[if lte IE 8]>
+  <link rel="stylesheet" href="/static/css/grids-responsive-old-ie.css">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/static/css/grids-responsive.css">
+<!--<![endif]-->
+<link rel="stylesheet" type="text/css" href="/static/css/font-awesome.min.css">
+<link rel="shortcut icon" href="/static/material/p1.ico" type="image/ico">
+</head>
+<body>
+	<div class="pure-g" style="background: #26B26A;">
+		<div class="pure-u-10-24">
+			<div class="inner-box">
+				<a href="/"><img src="/static/material/logo.png"><i class="fa fa-pencil-square fa-2x" style="color: #DEDEDE"></i></a>
+			</div>
+		</div>
+		<div class="pure-u-10-24">
+			<div class="pure-menu pure-menu-open pure-menu-horizontal" id="horizontal-menu">
+    			<ul id="std-menu-items">
+	        			<li class=".menuItem"><a href="/left-behind/">留守儿童</a></li>
+	        			<li class=".menuItem"><a href="/news/">新闻动态</a></li>
+	        			<li class=".menuItem"><a href="/literature/">文艺风采</a></li>
+	        			<li class=".menuItem"><a href="/reporter/">小记者站</a></li>
+    			</ul>
+			</div>
+		</div>
+		<!-- <div class="pure-u-4-24">
+			<div class="innner-box">
+				<a href="" class="pure-button pure-button-primary" id="modaltrigger">登录</a>
+			</div>
+		</div> -->
+	</div>
+	<div class="pure-g">
+		<div class="pure-u-4-24">
+		</div>
+		<div class="pure-u-16-24" style="padding-bottom:2em; padding-top:2em;">
+			<div id="youkuplayer" style="width:800px;height:600px"></div>
+		</div>
+		<div class="pure-u-4-24">
+		</div>
+	</div>
+	<div style="padding-bottom:1em;">
+		<div class="pure-g">
+			<div class="pure-u-1">
+				<h1>留守之家 <i class="fa fa-slideshare"></i></h1>
+			</div>
+		</div>
+		{% for i in list %}
+			<div class="pure-g">
+			{% for j in i %}
+				{% if j != None %}
+						<div class="pure-u-1-3 article-block">
+							<a href="/news/content?news_id={{ j.id }}">
+							<div class="pure-g">
+								<div class="pure-u-20-24">
+									<h3><strong>{{ j.title }}</strong></h3>
+								</div>
+								<div class="pure-u-4-20">
+									<img src="/static/sculpture/s{{j.scul}}.png" class="sculpture">
+								</div>
+							</div>
+							<div class="pure-g">
+								<p>{{ j.intro }}</p>
+								<h6>{{ j.uptime }}</h6>
+							</div>
+							</a>
+						</div>
+				{% endif %}
+			{% endfor %}
+			</div>
+		{% endfor %}
+		<div class="pure-g">
+			<div class="pure-u-18-24">
+			</div>
+			<div class="pure-u-5-24">
+				<div>
+					<a href="/article-list/" class="button-more-info-school-news">查看更多</a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<div class="pure-g" style="background:#DEDEDE;">
+		<div class="pure-u-1-3">
+			<div class="chaining">
+				<h3>友情链接</h3>
+				<ul>
+					<a href="http://e.gyxww.cn/gyrb/html/2014-10/27/node_1.htm"><li>广元日报社数字报刊</li></a>
+					<a href="http://gywb.gyscw.com/"><li>广元晚报电子报</li></a>
+					<a href="http://www.gyxww.cn/sjb/"><li>广元手机报</li></a>
+					<a href="http://www.gyxww.cn/gyxjzw/"><li>广元小记者网</li></a>
+				</ul>
+			</div>
+		</div>
+		<div class="pure-u-1-3">
+			<div style="margin-top: 1em;">
+				<span class="bdsharebuttonbox">
+					<a href="#" class="bds_more" data-cmd="more"></a>
+					<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+					<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+					<a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+					<a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+					<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+				</span>
+				<p>© copyright 广元日报社版权所有</p>
+				<p>技术支持：IEC</p>
+			</div>
+		</div>
+		<div class="pure-u-1-3">
+			<div class="attention-me">
+				<h3>欢迎关注广元日报</h3>
+				<span>
+					<a><i class="fa fa-weibo fa-3x fa-two-dimension-code"></i></a>
+					<img src="/static/material/sinaweibo.jpg" id="two-dimension-code-weibo">
+				</span>
+				<span>
+					<a><i class="fa fa-weixin fa-3x fa-two-dimension-code"></i></a>
+					<img src="/static/material/wechat.jpg" id="two-dimension-code-wechat">
+				</span>
+			</div>
+		</div>
+	</div>
+</body>
+ <script type="text/javascript" src="/static/js/jquery.js"></script>
+<script type="text/javascript" src="/static/js/jquery.bxslider.js"></script>
+<script type="text/javascript">
+        $(document).ready(function(){
+          $('.slider2').bxSlider({
+            slideWidth: 480,
+            // slideHeight: 360; 
+	auto: true,
+  	autoControls: true,
+            minSlides: 1,
+            maxSlides: 1,
+            slideMargin: 10
+          });
+        });
+</script>
+<script type="text/javascript" src="/static/js/jquery.goup.min.js"></script>
+<script type="text/javascript">
+        	$(document).ready(function () {
+	            $.goup({
+	                trigger: 50,
+	                bottomOffset: 50,
+	                locationOffset: 100,
+	                title: '返回顶部',
+	                titleAsText: true
+	            });
+        });
+</script>
+<script type="text/javascript" src="http://player.youku.com/jsapi">
+	player = new YKU.Player('youkuplayer',{
+	styleid: '0',
+	client_id: '895638415bee4fcd',
+	vid: 'XNzE1MTM0MjU2'
+	});
+	function playVideo(){
+	player.playVideo();
+	}
+	function pauseVideo(){
+	player.pauseVideo();
+	}
+	function seekTo(s){
+	player.seekTo(s);
+	}
+	function currentTime(){
+	return player.currentTime();
+	}
+</script>
+<script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"32"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+</html>

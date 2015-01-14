@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport">
+<title>小记者站-广元日报社</title>
+<link rel="stylesheet" type="text/css" href="/static/css/pure.css">
+<link rel="stylesheet" type="text/css" href="/static/css/index-css.css">
+<link href="/static/css/jquery.bxslider.css" rel="stylesheet" type="text/css">
+<!--[if lte IE 8]>
+  <link rel="stylesheet" href="./css/grids-responsive-old-ie.css">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/static/css/grids-responsive.css">
+<!--<![endif]-->
+<link rel="stylesheet" type="text/css" href="/static/css/bgstretcher.css">
+<link rel="stylesheet" type="text/css" href="/static/css/font-awesome.min.css">
+<link rel="shortcut icon" href="/static/material/p1.ico" type="image/ico">
+</head>
+<body>
+	<div class="pure-g" style="background: #26B26A;">
+		<div class="pure-u-10-24">
+			<div class="inner-box">
+				<a href="/"><img src="/static/material/logo.png"><i class="fa fa-pencil-square fa-2x" style="color: #DEDEDE"></i></a>
+			</div>
+		</div>
+		<div class="pure-u-10-24">
+			<div class="pure-menu pure-menu-open pure-menu-horizontal" id="horizontal-menu">
+	    			<ul id="std-menu-items">
+		        			<li class=".menuItem"><a href="#stay-along-children">留守儿童</a></li>
+		        			<li class=".menuItem"><a href="#news">新闻动态</a></li>
+		        			<li class=".menuItem"><a href="#literature">文艺风采</a></li>
+		        			<li class=".menuItem"><a href="#reporter">小记者站</a></li>
+    				</ul>
+			</div>
+		</div>
+		<!-- <div class="pure-u-4-24">
+			<div class="innner-box">
+				<a href="" class="pure-button pure-button-primary" id="modaltrigger">登录</a>
+			</div>
+		</div> -->
+	</div>
+	<div id="stay-along-children" class="pure-g">
+		<div class="pure-u-1" id="bg-stretcher">
+			<span class="slogan">
+				<h1>携着梦想</h1>
+				<h1>扬帆起航</h1>
+				<a href="/left-behind/"><button id="slogan-button">了解更多</button></a>
+			</span>
+		</div>
+	</div>
+	<div id="news" class="linear-graditent">
+		<div class="pure-g">
+			<div class="pure-u-1">
+				<h1 style="text-align:center; color:#D1D1D1;"><i class="fa fa-newspaper-o"></i> 广元校园新闻</h1>
+			</div>
+		</div>
+		<div class="pure-g">
+			<div class="pure-u-14-24">
+				<div class="slider2">
+				{% for i in news %}
+     			 	<div class="slide">
+     			 		<a href="#">
+     			 		<img src="/media/{{ i.image }}">
+     			 		<h3>{{ i.news }}</h3>
+     			 		</a>
+     			 	</div>
+     			{% endfor %}
+    			</div>
+			</div>
+			<div class="pure-u-10-24">
+				<h1>最新校园资讯时刻掌握</h1>
+				<h1>家校沟通助力雏鹰</h1>
+				<a href="/news/"><button class="primary-button">最新资讯请点这里</button></a>
+			</div>
+		</div>
+	</div>
+	<div id="literature" style="margin-bottom: 1em;">
+		<div class="pure-g">
+			<div class="pure-u-1">
+				<h1 style="text-align:center; color:#005E37;"><i class="fa fa-camera-retro"></i> 文艺风采</h1>
+			</div>
+		</div>
+		<div class="pure-g">
+			<div class="pure-u-3-24">
+			</div>
+			<div class="pure-u-5-24">
+				<img src="/static/material/blockicon1.png">
+			</div>
+			<div class="pure-u-1-24">
+			</div>
+			<div class="pure-u-5-24">
+				<img src="/static/material/blockicon2.png">
+			</div>
+			<div class="pure-u-2-24">
+			</div>
+			<div class="pure-u-4-24">
+				<a href="/literature/"><button class="primary-button" style="margin-top: 3em;">了解更多</button></a>
+			</div>
+			<div class="pure-u-4-24">
+			</div>
+		</div>
+	</div>
+	<div id="reporter" style="background: #26B26A;">
+		<div class="pure-g">
+			<div class="pure-u-1">
+				<h1 style="text-align:center; color: #D1D1D1;"><i class="fa fa-pencil-square-o"></i> 小记者站</h1>
+			</div>
+		</div>
+		<div class="pure-g">
+			<div class="pure-u-4-24">
+			</div>
+			<div class="pure-u-8-24">
+				<img src="/static/material/index-reporter-icon.png" style="width: 80%;">
+			</div>
+			<div class="pure-u-8-24">
+				<div class="school-message-list">
+					<ul>
+					{% for i in top %}
+						<li><a href=""><i class="fa fa-angle-right"></i> {{ i }}</a></li>
+					{% endfor %}
+					</ul>
+				</div>
+			</div>
+			<div class="pure-u-4-24">
+			</div>
+		</div>
+		<div class="pure-g">
+			<div class="pure-u-4-24">
+			</div>
+			<div class="pure-u-8-24">
+				<img src="/static/material/index-reporter-icon2.png" style="width: 80%; padding-bottom: 1em;">
+				<span class="graph-title">
+					<a href="#"><i class="fa fa-trophy"></i> {{ star }}</a>
+				</span>
+			</div>
+			<div class="pure-u-8-24">
+				<div>
+					<a href="#">
+						<img src="/media/{{ star.image.name }}">
+					</a>
+				</div>
+			</div>
+			<div class="pure-u-4-24">
+			</div>
+		</div>
+		<div class="pure-g">
+			<div class="pure-u-5-24">
+			</div>
+			<div class="pure-u-14-24" style="margin-bottom:2em; margin-top: 1em;">
+				<a href="/reporter/"><button class="primary-button" style="padding: 1em 19em;">进入小记者之家</button></a>
+			</div>
+			<div class="pure-u-5-24">
+			</div>
+		</div>
+	</div>
+	<div class="pure-g" style="background:#DEDEDE;">
+		<div class="pure-u-1-3">
+			<div class="chaining">
+				<h3>友情链接</h3>
+				<ul>
+					<a href="http://e.gyxww.cn/gyrb/html/2014-10/27/node_1.htm"><li>广元日报社数字报刊</li></a>
+					<a href="http://gywb.gyscw.com/"><li>广元晚报电子报</li></a>
+					<a href="http://www.gyxww.cn/sjb/"><li>广元手机报</li></a>
+					<a href="http://www.gyxww.cn/gyxjzw/"><li>广元小记者网</li></a>
+				</ul>
+			</div>
+		</div>
+		<div class="pure-u-1-3">
+			<div style="margin-top: 1em;">
+				<span class="bdsharebuttonbox">
+					<a href="#" class="bds_more" data-cmd="more"></a>
+					<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+					<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+					<a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+					<a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+					<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+				</span>
+				<p>© copyright 广元日报社版权所有</p>
+				<p>技术支持：IEC</p>
+			</div>
+		</div>
+		<div class="pure-u-1-3">
+			<div class="attention-me">
+				<h3>欢迎关注广元日报</h3>
+				<span>
+					<a><i class="fa fa-weibo fa-3x fa-two-dimension-code"></i></a>
+					<img src="/static/material/sinaweibo.jpg" id="two-dimension-code-weibo">
+				</span>
+				<span>
+					<a><i class="fa fa-weixin fa-3x fa-two-dimension-code"></i></a>
+					<img src="/static/material/wechat.jpg" id="two-dimension-code-wechat">
+				</span>
+			</div>
+		</div>
+	</div>
+	<div id="loginmodal" style="display:none;">
+	    	<h1>User Login</h1>
+	    	<form id="loginform" name="loginform" method="post" action="/index/">
+		      	<label for="username">Username:</label>
+		      	<input type="text" name="username" id="username" class="txtfield" tabindex="1">
+		      	<label for="password">Password:</label>
+		      	<input type="password" name="password" id="password" class="txtfield" tabindex="2">
+		     	 <div class="center">
+		     	 	<input type="submit" name="loginbtn" id="loginbtn" class="flatbtn-blu hidemodal" value="Log In" tabindex="3">
+		     	 </div>
+   		</form>
+  	</div>
+</body>
+<!-- <script src="./js/jQuery1.11.1.js"></script> -->
+<!-- <script type="text/javascript" src="./js/jquery-1.9.1.min.js"></script>
+ -->
+ <script type="text/javascript" src="/static/js/jquery.js"></script>
+ <script type="text/javascript" src="/static/js/bgstretcher.js"></script>
+<script type="text/javascript" src="/static/js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="/static/js/jquery.leanModal.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+//  Initialize Backgound Stretcher
+	$("#bg-stretcher").bgStretcher({
+		images: [{% for i in cover %}'/media/{{ i.image.name }}', {% endfor %}],
+		imageWidth: 1350,
+		// imageHeight: 600,
+		slideDirection: 'N',
+		slideShowSpeed: 3000,
+		transitionEffect: 'fade',
+		sequenceMode: 'normal',
+	});
+});
+</script>
+<script type="text/javascript">
+        $(document).ready(function(){
+          $('.slider2').bxSlider({
+            slideWidth: 480,
+            // slideHeight: 360; 
+	auto: true,
+  	autoControls: true,
+            minSlides: 1,
+            maxSlides: 1,
+            slideMargin: 10
+          });
+        });
+</script>
+<script type="text/javascript">
+$(function(){
+  $('#loginform').submit(function(e)
+    return false;
+  });
+  $('#modaltrigger').leanModal({ top: 110, overlay: 0.7, closeButton: ".hidemodal" });
+});
+</script>
+<script type="text/javascript" src="/static/js/jquery.goup.min.js"></script>
+<script type="text/javascript">
+        	$(document).ready(function () {
+	            $.goup({
+	                trigger: 150,
+	                bottomOffset: 85,
+	                locationOffset: 100,
+	                title: '',
+	                titleAsText: true
+	            });
+        });
+</script>
+<script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"32"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+</html>
+
+	

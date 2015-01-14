@@ -1,0 +1,58 @@
+.inner-box>img{
+  margin-left: 10em;
+}
+#modaltrigger{
+  margin-left: -1.3em;
+}
+
+/*正文样式*/
+.pure-u-16-24>h5{
+  border-bottom: 1px solid #DEDEDE;
+  color: grey;
+}
+/*footer样式*/
+.chaining{
+	margin-left: 8em;
+}
+.chaining a{
+	text-decoration: none;
+      color:  #000000;
+}
+.chaining ul{
+  list-style: none;
+  margin-left: -2.6em;
+}
+.copyright{
+	margin-top: 5em;
+	margin-left: 2.8em;
+}
+.attention-me img{
+  width: 8em;
+}
+.fa-two-dimension-code{
+      margin-right: 0.5em;
+      margin-top: 0.25em;
+}
+#two-dimension-code-wechat,#two-dimension-code-weibo{
+      display: none;
+}
+span > a:hover{
+  color: #26B26A;
+}
+a:hover+#two-dimension-code-weibo{
+      display: block;
+      position: relative;
+      top: -11.2em;
+      left: -2em;
+}
+a:hover+#two-dimension-code-wechat{
+      display: block;
+      position: relative;
+      top: -11.2em;
+      left: 2em;
+}
+/*头像尺寸设定*/
+.sculpture{
+  width: 3em;
+  border-radius: 50%;
+}
