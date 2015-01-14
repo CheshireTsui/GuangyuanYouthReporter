@@ -72,3 +72,17 @@ def NewsList(request):
     news_list = composeArticle(news_all)
     imgs_list = composeImage(imgs_all)
     return render_to_response('news.html',{'list':news_list, 'school':imgs_list,})
+
+
+def Literature(request):
+    shooting_all = Column.objects.get(name="我爱拍客").article.all()
+    idea_all = Column.objects.get(name="奇思妙想").article.all()
+    imgs_list = []
+    raw_list = Column.objects.get(name="书画廊").article.all()
+    for x in raw_list:
+        img = x.image.all()
+        imgs_list.append(img[0])
+
+    shooting_list = composeImage(shooting_all)
+    idea_list = composeArticle(idea_all)
+    return render_to_response('literature.html',{'shooting':shooting_list, 'list':idea_list, 'img':imgs_list,})
